@@ -27,23 +27,29 @@ python3 -m http.server 8000
 
 On phones, a bar with **Call** and **Book now** buttons stays fixed at the bottom of the screen.
 
-## Connecting Booksy
+## Online booking (Squire now, Booksy later)
 
-Every booking button on the page has a `data-book` attribute. One setting controls all of them.
+Every booking button on the page has a `data-book` attribute. One setting in `assets/js/config.js` controls all of them.
 
-1. Open `assets/js/config.js`.
-2. Paste the shop's Booksy page link into `booking.url`.
-3. Optional: if each barber has their own Booksy link, add it under `booking.barbers`. Any barber left blank uses the main link.
+The site is currently connected to the shop's Squire page:
 
 ```js
 booking: {
-  url: "https://booksy.com/en-gb/123456_cut-throat-kenny_barber-shop_...",
+  url: "https://getsquire.com/discover/barbershop/cut-throat-kenny-royton-oldham",
   barbers: { jason: "", magnus: "", travis: "" },
   newTab: true,
 },
 ```
 
-While `url` is empty, the booking buttons scroll to the booking section, which says online booking is coming soon and shows the phone number. Once a link is set, every button opens Booksy and the booking section switches to a "Book online" button.
+To move to Booksy:
+
+1. Open `assets/js/config.js`.
+2. Replace `booking.url` with the shop's Booksy page link (it looks like `https://booksy.com/en-gb/123456_cut-throat-kenny_barber-shop_...`).
+3. Optional: if each barber has their own booking link, add it under `booking.barbers`. Any barber left blank uses the main link.
+
+Don't paste a link that ends in `?rwg_token=...`. That token is added by Google for one visit, so remove it and keep the address before the `?`.
+
+If `url` is left empty, the booking buttons scroll to the booking section instead, which says online booking is coming soon and shows the phone number. With a link set, every button opens the booking page in a new tab and the booking section shows a "Book online" button.
 
 To use Booksy's own widget button as well, paste the `<script>` tag Booksy provides inside `<div id="booksy-widget">` in `index.html`. The div stays hidden while it's empty.
 
@@ -70,7 +76,7 @@ The current site couldn't be loaded while this was built, so the content comes f
 - **Prices.** Public listings showed ranges (haircut £25–30, beard trim £15–20, combo around £35), so the site shows "from" prices. Other services such as head shaves, buzz cuts and haircut-plus-shave packages had unclear prices and are left off for now.
 - **Opening hours.** These come from the shop's own site. Fresha shows different Saturday hours.
 - **Team.** Jason, Magnus and Travis are taken from a booking listing. Confirm the current team, their roles and a short line about each.
-- **Review score.** "5.0 from 300+ reviews" is based on Fresha (317 reviews). Update it once reviews move to Booksy.
+- **Review score.** "5.0 from 300+ reviews" is based on Fresha (317 reviews). Squire showed 5.0 from 193 reviews. Update the figure once reviews move to Booksy.
 - **Reviews.** The three review cards are marked placeholders. Replace them with real reviews, with the client's permission.
 - **Social links.** Only Facebook was found. Add Instagram or TikTok links in the footer if the shop uses them.
 - **Logo.** The wordmark and razor badge are new. Swap in the shop's existing logo if they want to keep it.

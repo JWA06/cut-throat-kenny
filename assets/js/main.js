@@ -5,7 +5,7 @@
   var booking = config.booking || {};
 
   /* Booking links ---------------------------------------------------------
-     With a booking URL set, every [data-book] link opens Booksy.
+     With a booking URL set, every [data-book] link opens the booking page.
      Without one, they keep pointing at the #book section. */
   function setupBooking() {
     var url = (booking.url || "").trim();
