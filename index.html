@@ -68,9 +68,44 @@
         <circle vector-effect="non-scaling-stroke" cx="377" cy="60" r="3"/>
       </g>
     </symbol>
-    <symbol id="i-camera" viewBox="0 0 24 24">
-      <path d="M4 7h3l2-2.5h6L17 7h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/>
-      <circle cx="12" cy="13" r="3.5"/>
+    <symbol id="i-scissors" viewBox="0 0 64 64">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle vector-effect="non-scaling-stroke" cx="21" cy="49" r="7"/>
+        <circle vector-effect="non-scaling-stroke" cx="43" cy="49" r="7"/>
+        <path vector-effect="non-scaling-stroke" d="M25.5 43.5 L41 8 L43 9.5 L34 32"/>
+        <path vector-effect="non-scaling-stroke" d="M38.5 43.5 L23 8 L21 9.5 L30 32"/>
+        <circle vector-effect="non-scaling-stroke" cx="32" cy="29" r="1.5"/>
+      </g>
+    </symbol>
+    <symbol id="i-clippers" viewBox="0 0 64 64">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path vector-effect="non-scaling-stroke" d="M20 18 H44 L42 54 C42 57 39 59 36 59 H28 C25 59 22 57 22 54 Z"/>
+        <path vector-effect="non-scaling-stroke" d="M19 12 H45 V18 H19 Z"/>
+        <path vector-effect="non-scaling-stroke" d="M22 12V7M26 12V7M30 12V7M34 12V7M38 12V7M42 12V7"/>
+        <path vector-effect="non-scaling-stroke" d="M32 26 V37"/>
+        <circle vector-effect="non-scaling-stroke" cx="32" cy="48" r="2"/>
+      </g>
+    </symbol>
+    <symbol id="i-comb" viewBox="0 0 64 64">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path vector-effect="non-scaling-stroke" d="M8 20 H56 A2 2 0 0 1 58 22 V28 H6 V22 A2 2 0 0 1 8 20 Z"/>
+        <path vector-effect="non-scaling-stroke" d="M9 28v18M14 28v18M19 28v18M24 28v18M29 28v18M34 28v13M37 28v13M40 28v13M43 28v13M46 28v13M49 28v13M52 28v13M55 28v13"/>
+      </g>
+    </symbol>
+    <symbol id="i-towel" viewBox="0 0 64 64">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path vector-effect="non-scaling-stroke" d="M28 40 a2 2 0 0 1 4 0 a4 4 0 0 1 -8 0 a6 6 0 0 1 12 0 a8 8 0 0 1 -16 0 a10 10 0 0 1 20 0 a12 12 0 0 1 -24 0"/>
+        <path vector-effect="non-scaling-stroke" d="M28 52 H57"/>
+        <path vector-effect="non-scaling-stroke" d="M21 23 c-3 -4 3 -6 0 -10 M29 22 c-3 -4 3 -6 0 -10 M37 23 c-3 -4 3 -6 0 -10"/>
+      </g>
+    </symbol>
+    <symbol id="i-brush" viewBox="0 0 64 64">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path vector-effect="non-scaling-stroke" d="M24 30 C17 22 19 7 32 6 C45 7 47 22 40 30 Z"/>
+        <path vector-effect="non-scaling-stroke" d="M24 30 H40 V35 H24 Z"/>
+        <path vector-effect="non-scaling-stroke" d="M26 35 C25 42 23 48 24 54 C24 57 27 58 32 58 C37 58 40 57 40 54 C41 48 39 42 38 35"/>
+        <path vector-effect="non-scaling-stroke" d="M29 12 C28 18 28 24 29 29 M35 12 C36 18 36 24 35 29"/>
+      </g>
     </symbol>
     <symbol id="i-phone" viewBox="0 0 24 24">
       <path d="M5 4h3.5l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5L15 13.5l5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>
@@ -162,7 +197,7 @@
           <ul class="proof" role="list">
             <li>
               <span class="proof__big">5.0 <svg class="stars" aria-hidden="true"><use href="#i-stars"/></svg></span>
-              <span class="proof__small">From 300+ client reviews</span>
+              <span class="proof__small">From 500+ reviews</span>
             </li>
             <li>
               <span class="proof__big">7 days</span>
@@ -178,10 +213,13 @@
         <div class="hero__media">
           <figure class="photo photo--arch">
             <img src="assets/photos/hero.jpg" alt="A hot towel cut-throat shave at Cut Throat Kenny" width="800" height="1000" fetchpriority="high">
-            <div class="photo__slot" aria-hidden="true">
-              <svg class="icon"><use href="#i-camera"/></svg>
-              <strong>Jason at the chair</strong>
-              <small>assets/photos/hero.jpg</small>
+            <div class="photo__slot photo__slot--pole" aria-hidden="true">
+              <div class="pole-art">
+                <span class="pole-art__ball"></span>
+                <span class="pole-art__cap"></span>
+                <span class="pole-art__glass"><span class="pole-art__stripes"></span></span>
+                <span class="pole-art__cap pole-art__cap--base"></span>
+              </div>
             </div>
           </figure>
 
@@ -311,10 +349,13 @@
       <div class="wrap story">
         <figure class="photo photo--frame story__photo">
           <img src="assets/photos/shop.jpg" alt="Inside the Cut Throat Kenny shop on Rochdale Road, Royton" width="1000" height="1250" loading="lazy">
-          <div class="photo__slot" aria-hidden="true">
-            <svg class="icon"><use href="#i-camera"/></svg>
-            <strong>The shop on Rochdale Road</strong>
-            <small>assets/photos/shop.jpg</small>
+          <div class="photo__slot photo__slot--sign" aria-hidden="true">
+            <div class="sign">
+              <span class="sign__small">Est. 2015</span>
+              <span class="sign__name gilt">Cut Throat<br>Kenny</span>
+              <span class="sign__trade">Traditional barbers</span>
+              <span class="sign__small">Rochdale Road &middot; Royton</span>
+            </div>
           </div>
         </figure>
 
@@ -354,11 +395,7 @@
           <li class="barber">
             <figure class="photo photo--arch">
               <img src="assets/photos/team-jason.jpg" alt="Jason Kenny, owner and barber" width="800" height="1000" loading="lazy">
-              <div class="photo__slot" aria-hidden="true">
-                <svg class="icon"><use href="#i-camera"/></svg>
-                <strong>Jason</strong>
-                <small>assets/photos/team-jason.jpg</small>
-              </div>
+              <div class="photo__slot photo__slot--initial" aria-hidden="true"><span class="initial gilt">J</span></div>
             </figure>
             <div class="barber__body">
               <h3 class="barber__name">Jason</h3>
@@ -371,11 +408,7 @@
           <li class="barber">
             <figure class="photo photo--arch">
               <img src="assets/photos/team-magnus.jpg" alt="Magnus, barber" width="800" height="1000" loading="lazy">
-              <div class="photo__slot" aria-hidden="true">
-                <svg class="icon"><use href="#i-camera"/></svg>
-                <strong>Magnus</strong>
-                <small>assets/photos/team-magnus.jpg</small>
-              </div>
+              <div class="photo__slot photo__slot--initial" aria-hidden="true"><span class="initial gilt">M</span></div>
             </figure>
             <div class="barber__body">
               <h3 class="barber__name">Magnus</h3>
@@ -388,11 +421,7 @@
           <li class="barber">
             <figure class="photo photo--arch">
               <img src="assets/photos/team-travis.jpg" alt="Travis, barber" width="800" height="1000" loading="lazy">
-              <div class="photo__slot" aria-hidden="true">
-                <svg class="icon"><use href="#i-camera"/></svg>
-                <strong>Travis</strong>
-                <small>assets/photos/team-travis.jpg</small>
-              </div>
+              <div class="photo__slot photo__slot--initial" aria-hidden="true"><span class="initial gilt">T</span></div>
             </figure>
             <div class="barber__body">
               <h3 class="barber__name">Travis</h3>
@@ -411,11 +440,11 @@
       <div class="wrap">
         <div class="section-head section-head--split">
           <div class="section-head__main">
-            <p class="kicker">Recent work</p>
-            <h2 id="work-title">Fresh from the chair</h2>
+            <p class="kicker">The work</p>
+            <h2 id="work-title">In the chair</h2>
           </div>
           <a class="link-arrow" href="https://www.facebook.com/cutthroatkenny/" target="_blank" rel="noopener">
-            More on Facebook <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            Latest cuts on Facebook <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
         </div>
 
@@ -423,37 +452,37 @@
           <li>
             <figure class="photo">
               <img src="assets/photos/work-1.jpg" alt="A finished haircut at Cut Throat Kenny" width="900" height="900" loading="lazy">
-              <div class="photo__slot" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg><strong>Haircut</strong><small>work-1.jpg</small></div>
+              <div class="photo__slot photo__slot--tool" aria-hidden="true"><svg class="tool"><use href="#i-scissors"/></svg><strong>Haircuts</strong></div>
             </figure>
           </li>
           <li>
             <figure class="photo">
-              <img src="assets/photos/work-2.jpg" alt="A shaped and lined-up beard" width="900" height="900" loading="lazy">
-              <div class="photo__slot" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg><strong>Beard trim</strong><small>work-2.jpg</small></div>
+              <img src="assets/photos/work-2.jpg" alt="A clipper cut with a sharp fade" width="900" height="900" loading="lazy">
+              <div class="photo__slot photo__slot--tool" aria-hidden="true"><svg class="tool"><use href="#i-clippers"/></svg><strong>Clipper work</strong></div>
             </figure>
           </li>
           <li>
             <figure class="photo">
-              <img src="assets/photos/work-3.jpg" alt="A cut-throat shave in progress" width="900" height="900" loading="lazy">
-              <div class="photo__slot" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg><strong>Cut-throat shave</strong><small>work-3.jpg</small></div>
+              <img src="assets/photos/work-3.jpg" alt="A shaped and lined-up beard" width="900" height="900" loading="lazy">
+              <div class="photo__slot photo__slot--tool" aria-hidden="true"><svg class="tool"><use href="#i-comb"/></svg><strong>Beard trims</strong></div>
             </figure>
           </li>
           <li>
             <figure class="photo">
-              <img src="assets/photos/work-4.jpg" alt="A client under a hot towel" width="900" height="900" loading="lazy">
-              <div class="photo__slot" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg><strong>Hot towel</strong><small>work-4.jpg</small></div>
+              <img src="assets/photos/work-4.jpg" alt="A cut-throat shave in progress" width="900" height="900" loading="lazy">
+              <div class="photo__slot photo__slot--tool" aria-hidden="true"><svg class="tool tool--razor" viewBox="0 0 400 120"><use href="#i-razor"/></svg><strong>Cut-throat shaves</strong></div>
             </figure>
           </li>
           <li>
             <figure class="photo">
-              <img src="assets/photos/work-5.jpg" alt="Scissor work on a longer haircut" width="900" height="900" loading="lazy">
-              <div class="photo__slot" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg><strong>Scissor work</strong><small>work-5.jpg</small></div>
+              <img src="assets/photos/work-5.jpg" alt="A client under a hot towel" width="900" height="900" loading="lazy">
+              <div class="photo__slot photo__slot--tool" aria-hidden="true"><svg class="tool"><use href="#i-towel"/></svg><strong>Hot towels</strong></div>
             </figure>
           </li>
           <li>
             <figure class="photo">
-              <img src="assets/photos/work-6.jpg" alt="The barber chairs inside the shop" width="900" height="900" loading="lazy">
-              <div class="photo__slot" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg><strong>The chairs</strong><small>work-6.jpg</small></div>
+              <img src="assets/photos/work-6.jpg" alt="Lathering up before a shave" width="900" height="900" loading="lazy">
+              <div class="photo__slot photo__slot--tool" aria-hidden="true"><svg class="tool"><use href="#i-brush"/></svg><strong>Lather</strong></div>
             </figure>
           </li>
         </ul>
@@ -462,46 +491,74 @@
 
     <!-- Reviews -->
     <section class="section section--lather" id="reviews" aria-labelledby="reviews-title">
-      <div class="wrap">
-        <div class="section-head section-head--split">
-          <div class="section-head__main">
-            <p class="kicker">Reviews</p>
-            <h2 id="reviews-title">What clients say</h2>
-          </div>
-          <div class="rating">
-            <p class="rating__score">5.0</p>
-            <svg class="stars rating__stars" role="img" aria-label="Rated 5 out of 5"><use href="#i-stars"/></svg>
-            <p class="rating__meta">Average from 300+ client reviews</p>
-          </div>
+      <div class="wrap reviews">
+        <div class="reviews__intro">
+          <p class="kicker">Reviews</p>
+          <h2 id="reviews-title">Rated 5.0 by our clients</h2>
+          <p class="reviews__lede">More than 500 clients have reviewed the shop on Squire and Fresha, and the average on both is a perfect 5.0.</p>
+          <a class="link-arrow" href="https://getsquire.com/discover/barbershop/cut-throat-kenny-royton-oldham" target="_blank" rel="noopener">
+            Read the reviews <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
         </div>
 
-        <!-- Swap each slot for a real review before launch. -->
-        <ul class="review-list" role="list">
-          <li>
-            <figure class="review is-slot">
-              <p class="review__tag">Review slot</p>
-              <svg class="stars review__stars" aria-hidden="true"><use href="#i-stars"/></svg>
-              <blockquote><p>Paste a real client review here. The best ones name the barber and the service.</p></blockquote>
-              <figcaption>Client name &middot; Google</figcaption>
-            </figure>
+        <!-- Review figures: update these when they change. -->
+        <ul class="platforms" role="list">
+          <li class="platform">
+            <p class="platform__name">Squire</p>
+            <p class="platform__score">5.0</p>
+            <svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#i-stars"/></svg>
+            <p class="platform__count">193 reviews</p>
           </li>
-          <li>
-            <figure class="review is-slot">
-              <p class="review__tag">Review slot</p>
-              <svg class="stars review__stars" aria-hidden="true"><use href="#i-stars"/></svg>
-              <blockquote><p>Keep each one to two or three sentences so the three cards stay level.</p></blockquote>
-              <figcaption>Client name &middot; Squire</figcaption>
-            </figure>
+          <li class="platform">
+            <p class="platform__name">Fresha</p>
+            <p class="platform__score">5.0</p>
+            <svg class="stars" role="img" aria-label="5 out of 5 stars"><use href="#i-stars"/></svg>
+            <p class="platform__count">317 reviews</p>
           </li>
-          <li>
-            <figure class="review is-slot">
-              <p class="review__tag">Review slot</p>
-              <svg class="stars review__stars" aria-hidden="true"><use href="#i-stars"/></svg>
-              <blockquote><p>Reviews from Squire, Google or Facebook all work here. Ask the client before using theirs.</p></blockquote>
-              <figcaption>Client name &middot; Facebook</figcaption>
-            </figure>
+          <li class="platform platform--ask">
+            <p class="platform__name">Google</p>
+            <p class="platform__ask">Been in recently?</p>
+            <p class="platform__count">A quick Google review helps people nearby find the shop.</p>
+            <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Cut+Throat+Kenny+Royton" target="_blank" rel="noopener">
+              Leave a review <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Questions -->
+    <section class="section section--chair" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq">
+        <div class="faq__intro">
+          <p class="kicker">Good to know</p>
+          <h2 id="faq-title">Before you book</h2>
+          <p class="section-head__aside">Anything else, call the shop on <a href="tel:+447539829829">07539 829829</a>.</p>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq__item" open>
+            <summary>How do I book?</summary>
+            <p data-booking-live hidden>Online, any time, using any Book button on this page. Choose your barber, the service and a time that suits you. You can also call the shop on 07539 829829 during opening hours.</p>
+            <p data-booking-soon>Call the shop on 07539 829829 during opening hours. Online booking is coming soon.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Can I choose my barber?</summary>
+            <p>Yes. Pick Jason, Magnus or Travis when you book online, or ask for them by name when you call.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Do you cut children's hair?</summary>
+            <p>Yes. Under-16s pay a reduced price, from £20, and so do over-65s. Please bring valid ID.</p>
+          </details>
+          <details class="faq__item">
+            <summary>What's in a cut-throat shave?</summary>
+            <p>A consultation, a beard trim if you need one, a face scrub, a hot towel and a straight-razor shave, finished with moisturiser and aftershave. It takes about 30 minutes and costs £25.</p>
+          </details>
+          <details class="faq__item">
+            <summary>When are you open?</summary>
+            <p>Seven days a week: Monday to Wednesday and Friday 10am to 6pm, Thursday 10am to 7pm, Saturday 9am to 4pm and Sunday 10am to 2pm.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -571,6 +628,10 @@
         <div class="book__body" data-booking-live hidden>
           <p>Choose your barber, pick a time that suits you, and you're booked in.</p>
           <a class="btn btn--brass btn--lg" href="#book" data-book>Book online</a>
+          <p class="book__meta">
+            <span class="status" data-status>Open 7 days a week</span>
+            <a href="tel:+447539829829">Or call 07539 829829</a>
+          </p>
         </div>
 
         <!-- Shown until online booking goes live -->

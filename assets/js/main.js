@@ -66,6 +66,26 @@
     });
   }
 
+  /* Nav: underline the link for the section in view ---------------------- */
+  function setupScrollSpy() {
+    var links = Array.prototype.slice.call(document.querySelectorAll(".nav a[href^='#']"));
+    var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
+    if (!links.length || !sections.length || !("IntersectionObserver" in window)) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = "#" + entry.target.id;
+        links.forEach(function (link) {
+          if (link.getAttribute("href") === id) link.setAttribute("aria-current", "true");
+          else link.removeAttribute("aria-current");
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+
   /* Opening hours: highlight today and show open / closed -----------------
      Hours are read from the table rows (data-open / data-close), so the
      table in index.html is the only place they need editing. */
@@ -176,6 +196,7 @@
   setupPhotos();
   setupBooking();
   setupHeader();
+  setupScrollSpy();
   setupHours();
   setupYear();
 })();
